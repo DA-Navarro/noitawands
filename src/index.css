@@ -1,0 +1,107 @@
+body{
+    font: 14px "Lucida Console", Futura, sans-serif;
+    margin: 20px;
+    background-color: #0f0e0a;
+    color: white;
+}
+
+.Main{
+    height: 100%;
+    width: 100%;
+    min-width: max-content;
+    border: 1px solid #c98930;
+    border-radius: 5px;
+    display: flex;
+}
+
+.WandList{
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+    margin-right: 20px;
+    margin-left: 10px;
+    border-radius: 3px;
+    object-fit: contain;
+}
+
+.Wand{
+    object-fit: contain;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #c98930;
+    border-radius: 3px;
+    display: flex;
+}
+
+.WandLabels{
+    padding-top: 10px;
+    width: fit-content;
+    min-width: 152px;
+    flex: 0;
+}
+
+.WandStats{
+    margin-inline: 10px;
+    padding-top: 10px;
+    width: fit-content;
+    flex: 0;
+}
+
+.WandSpells{
+    border: 1px solid #c98930;
+    border-radius: 3px;
+    flex: 1;
+    padding: 10px;
+    display: flex;
+}
+
+.WandSlot{
+    width: 52px;
+    height: 52px;
+    border: 2px dotted #794738;
+    border-radius: 5px;
+    border-right: 2px dotted #5f302c;
+    border-bottom: 2px dotted #5f302c;
+    background-color: #352925;
+    margin-inline: 2px;
+}
+
+.SpellList{
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    min-width: 325px;
+    max-height: 100%;
+    overflow-y: auto;
+    margin: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    border-radius: 3px;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.Spell{
+    width: 48px;
+    height: 48px;
+    border: 2px solid #5e5061;
+    border-radius: 5px;
+    border-right: 2px dotted #5e5061;
+    border-bottom: 2px dotted #5e5061;
+    background-color: #1b2b38;
+    transition: 0.6s;
+}
+
+.SpellThumbnail{
+    width: 100%;
+    height: 100%;
+}
+
+.SpellList::after{
+    content: "";
+    flex: auto;
+}
+
+.Spell:hover{
+    opacity: 1;
+}

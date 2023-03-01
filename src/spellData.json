@@ -1,0 +1,59 @@
+[
+    {
+        "type": "Projectile",
+        "name": "Spark Bolt",
+        "image": "SparkBolt.png",
+        "mana_drain": 5,
+        "cast_delay": 0.05,
+        "spread": -1
+    },
+    {
+        "type": "Projectile",
+        "name": "Spark Bolt with Trigger",
+        "image": "SparkBoltTrigger.png",
+        "mana_drain": 10,
+        "cast_delay": 0.05
+    },
+    {
+        "type": "Projectile",
+        "name": "Spark Bolt with Double Trigger",
+        "image": "SparkBoltDoubleTrigger.png",
+        "mana_drain": 15,
+        "cast_delay": 0.07
+    },
+    {
+        "type": "Projectile",
+        "name": "Spark Bolt with Timer",
+        "image": "SparkBoltTimer.png",
+        "mana_drain": 10,
+        "cast_delay": 0.05
+    },
+    {
+        "type": "Projectile",
+        "name": "Chainsaw",
+        "image": "Chainsaw.png",
+        "mana_drain": 1,
+        "cast_delay": 0,
+        "spread": 6
+    },
+    {
+        "type": "Projectile",
+        "name": "Chain Bolt",
+        "image": "ChainBolt.png",
+        "mana_drain": 80,
+        "cast_delay": 0.75,
+        "spread": 14
+    },
+    {
+        "type": "Multicast",
+        "name": "Double Spell",
+        "image": "DoubleSpell.png",
+        "mana_drain": 0
+    },
+    {
+        "type": "Multicast",
+        "name": "Triple Spell",
+        "image": "TripleSpell.png",
+        "mana_drain": 2
+    }
+]
