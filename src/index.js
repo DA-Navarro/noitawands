@@ -19,7 +19,7 @@ class App extends React.Component {
                 Recharge_Time: 0.40,
                 Mana: 116,
                 Mana_Chrg_Spd: 28,
-                Capacity: 12,
+                Capacity: 5,
                 Spread: 0,
                 Spells: []
             }],

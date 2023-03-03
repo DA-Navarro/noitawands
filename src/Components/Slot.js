@@ -3,10 +3,10 @@ import WandSpell from './WandSpell';
 import ItemTypes from '../Utilities/Items';
 import { useDrop } from 'react-dnd';
 
-function Slot({spell, position, drophandler, children}){
+function Slot({spell, position, dropHandler, swapSpell}){
     const [{ isOver }, drop] = useDrop(() => ({
         accept: ItemTypes.SPELL,
-        drop: (item) => drophandler(item, position),
+        drop: (item) => dropHandler(item, position),
         collect: monitor => ({
           isOver: !!monitor.isOver(),
         }),
@@ -16,7 +16,7 @@ function Slot({spell, position, drophandler, children}){
     const displaySpell = (spell, position) => {
         if(spell !== undefined){
         return(
-            <WandSpell key={position} value={spell}/>
+            <WandSpell position={position} value={spell} swapSpell={swapSpell}/>
         )
         }
     }
