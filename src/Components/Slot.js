@@ -1,31 +1,51 @@
-import React from 'react';
-import WandSpell from './WandSpell';
-import ItemTypes from '../Utilities/Items';
-import { useDrop } from 'react-dnd';
+import React, { useState } from "react";
+import Spell from "./Spell";
+import ItemTypes from "../Utilities/Items";
+import { useDrop } from "react-dnd";
 
-function Slot({spell, position, dropHandler, swapSpell}){
-    const [{ isOver }, drop] = useDrop(() => ({
-        accept: ItemTypes.SPELL,
-        drop: (item) => dropHandler(item, position),
-        collect: monitor => ({
-          isOver: !!monitor.isOver(),
-        }),
-      })
-    )
+function Slot({ spell, position, dropHandler, deleteSpell }) {
+  const [{ isOver }, drop] = useDrop(() => ({
+    accept: ItemTypes.SPELL,
+    drop: (item) => dropHandler(item, position),
+    collect: (monitor) => ({
+      isOver: !!monitor.isOver(),
+    }),
+  }));
 
-    const displaySpell = (spell, position) => {
-        if(spell !== undefined){
-        return(
-            <WandSpell position={position} value={spell} swapSpell={swapSpell}/>
-        )
-        }
-    }
+  const [isHovering, setIsHovering] = useState(false);
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
 
-    return(
-        <div className='WandSlot' ref={drop}>
-            {displaySpell(spell, position)}
-        </div>
+  const displaySpell = (spell, position) => {
+    return !spellIsNull ? (
+      <Spell key={position} value={spell} position={position} />
+    ) : (
+      <div />
     );
+  };
+
+  const spellIsNull = spell ? false : true;
+
+  return (
+    <div
+      className="WandSlot"
+      ref={drop}
+      onMouseOver={handleMouseOver}
+      onMouseOut={handleMouseOut}
+    >
+      {displaySpell(spell, position)}
+
+      {isHovering && !spellIsNull && (
+        <div className="deleteSpell" onClick={() => deleteSpell(position)}>
+          X
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default Slot;

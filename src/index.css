@@ -1,107 +1,238 @@
-body{
-    font: 14px "Lucida Console", Futura, sans-serif;
-    margin: 20px;
-    background-color: #0f0e0a;
-    color: white;
+body {
+  font: 14px "Lucida Console", Futura, sans-serif;
+  background-image: url("./imgs/background.jpg");
+  color: white;
+  height: 98vh;
 }
 
-.Main{
-    height: 100%;
-    width: 100%;
-    min-width: max-content;
-    border: 1px solid #c98930;
-    border-radius: 5px;
-    display: flex;
+.Main {
+  height: 100%;
+  width: 98%;
+  min-width: max-content;
+  border: 1px solid #c98930;
+  border-radius: 5px;
+  display: flex;
+  padding: 1em;
 }
 
-.WandList{
-    width: 100%;
-    height: 100%;
-    margin: 20px;
-    margin-right: 20px;
-    margin-left: 10px;
-    border-radius: 3px;
-    object-fit: contain;
+.WandList {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  /* width: 100%;
+  height: 100%; */
+  /* margin: 20px;
+  margin-right: 20px;
+  margin-left: 10px; */
+  border-radius: 3px;
+  /* object-fit: contain; */
 }
 
-.Wand{
-    object-fit: contain;
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid #c98930;
-    border-radius: 3px;
-    display: flex;
+.Wand {
+  display: flex;
+  flex-direction: column;
 }
 
-.WandLabels{
-    padding-top: 10px;
-    width: fit-content;
-    min-width: 152px;
-    flex: 0;
+.WandSpecs {
+  /* object-fit: contain; */
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #c98930;
+  background-color: rgba(15, 14, 10, 0.9);
+  border-radius: 3px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.WandStats{
-    margin-inline: 10px;
-    padding-top: 10px;
-    width: fit-content;
-    flex: 0;
+.WandStats {
+  display: flex;
 }
 
-.WandSpells{
-    border: 1px solid #c98930;
-    border-radius: 3px;
-    flex: 1;
-    padding: 10px;
-    display: flex;
+.Labels {
+  min-width: 152px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.WandSlot{
-    width: 52px;
-    height: 52px;
-    border: 2px dotted #794738;
-    border-radius: 5px;
-    border-right: 2px dotted #5f302c;
-    border-bottom: 2px dotted #5f302c;
-    background-color: #352925;
-    margin-inline: 2px;
+.Stats {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.SpellList{
-    display: flex;
-    flex-wrap: wrap;
-    width: 85%;
-    min-width: 325px;
-    max-height: 100%;
-    overflow-y: auto;
-    margin: 20px;
-    margin-left: 20px;
-    margin-right: 10px;
-    border-radius: 3px;
-    justify-content: space-between;
-    padding: 10px;
+.WandSpells {
+  border: 1px solid #c98930;
+  border-radius: 3px;
+  flex-grow: 1;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
-.Spell{
-    width: 48px;
-    height: 48px;
-    border: 2px solid #5e5061;
-    border-radius: 5px;
-    border-right: 2px dotted #5e5061;
-    border-bottom: 2px dotted #5e5061;
-    background-color: #1b2b38;
-    transition: 0.6s;
+.WandSlot {
+  width: 48px;
+  height: 48px;
+  border: 2px dotted #794738;
+  border-radius: 5px;
+  border-right: 2px dotted #5f302c;
+  border-bottom: 2px dotted #5f302c;
+  background-color: #352925;
+  margin-inline: 2px;
+  position: relative;
 }
 
-.SpellThumbnail{
-    width: 100%;
-    height: 100%;
+.WandActions {
+  margin-inline: 10px;
+  padding: 20px;
+  border: 1px solid #c98930;
+  background-color: rgba(15, 14, 10, 0.9);
+  border-radius: 3px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.SpellList::after{
-    content: "";
-    flex: auto;
+.SpellList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  /* width: 85%;
+  min-width: 325px;
+  max-height: 100%; */
+  overflow-y: auto;
+  /* margin: 20px;
+  margin-left: 20px;
+  margin-right: 10px; */
+  border-radius: 3px;
+  justify-content: space-between;
+  padding: 10px;
 }
 
-.Spell:hover{
-    opacity: 1;
+.Spell {
+  width: 44px;
+  height: 44px;
+  border: 2px solid #5e5061;
+  border-radius: 5px;
+  border-right: 2px dotted #5e5061;
+  border-bottom: 2px dotted #5e5061;
+  background-color: #1b2b38;
+  transition: 0.6s;
+}
+
+.SpellThumbnail {
+  width: 100%;
+  height: 100%;
+}
+
+.SpellList::after {
+  content: "";
+  flex: auto;
+}
+
+.Spell:hover {
+  opacity: 1;
+}
+
+.Header {
+  margin-top: -8px;
+  margin-bottom: 5px;
+  margin-inline: -8px;
+  border-bottom: 1px solid #c98930;
+  background-color: rgba(15, 14, 10, 0.9);
+  display: flex;
+  align-items: center;
+}
+
+.Logo {
+  height: 64px;
+  width: 96px;
+  margin-left: 10px;
+}
+
+@font-face {
+  font-family: "NoitaBlackletter"; /*Can be any text*/
+  src: local("NoitaBlackLetter"),
+    url("./fonts/NoitaBlackletter-Regular.ttf") format("truetype");
+}
+
+.Title {
+  font-family: "NoitaBlackLetter";
+  font-size: xx-large;
+  margin-top: 15px;
+}
+
+.deleteSpell {
+  position: absolute;
+  background-color: #5f302c;
+  border: 1px solid #5e5061;
+  color: black;
+  font-weight: bolder;
+  top: 2px;
+  right: 2px;
+  cursor: pointer;
+}
+
+.Label {
+  display: flex;
+  align-items: center;
+  min-width: 100px;
+  min-height: 21px;
+  border: 1px solid rgb(51, 51, 51);
+  font-size: small;
+}
+
+.Stat {
+  min-width: 100px;
+  min-height: 21px;
+  justify-content: center;
+  border: 1px solid rgb(51, 51, 51);
+}
+
+.Stat input {
+  background: transparent;
+  color: white;
+}
+
+.SlotButtons {
+  width: 48px;
+  height: 48px;
+  border: 2px dotted #794738;
+  border-radius: 5px;
+  border-right: 2px dotted #5f302c;
+  border-bottom: 2px dotted #5f302c;
+  background-color: #352925;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SlotButton {
+  flex-grow: 1;
+  height: 100%;
+  border: 2px dotted #794738;
+  text-align: center;
+  font-size: 24px;
+  color: #c98930;
+  cursor: pointer;
+}
+
+.Action {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+  padding: 5px;
+  min-width: 150px;
+  /* max-width: 350px; */
+  border: 2px solid rgb(51, 51, 51);
+  font-size: 10px;
+}
+
+.ActionThumbnail {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #5e5061;
+  border-radius: 5px;
+  background-color: #1b2b38;
 }
