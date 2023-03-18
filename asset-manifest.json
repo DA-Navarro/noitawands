@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/noitawands/static/css/main.d2486cd7.css",
+    "main.js": "/noitawands/static/js/main.40a5f616.js",
+    "static/media/background.jpg": "/noitawands/static/media/background.5a3ca770368a5d98d8ed.jpg",
+    "static/media/logo.png": "/noitawands/static/media/logo.bba0eb5ae7a772d73555.png",
+    "static/media/NoitaBlackletter-Regular.ttf": "/noitawands/static/media/NoitaBlackletter-Regular.bcebc8e29f21df2c8d40.ttf",
+    "static/media/deleteSpell.png": "/noitawands/static/media/deleteSpell.4cf85250644be08b0e98.png",
+    "index.html": "/noitawands/index.html",
+    "main.d2486cd7.css.map": "/noitawands/static/css/main.d2486cd7.css.map",
+    "main.40a5f616.js.map": "/noitawands/static/js/main.40a5f616.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d2486cd7.css",
+    "static/js/main.40a5f616.js"
+  ]
+}
